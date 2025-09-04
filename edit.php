@@ -26,8 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <h2>Edit Profile</h2>
 <form method="post">
-    Email: <input type="email" name="email" value="<?= htmlspecialchars($_SESSION['email']) ?>" required><br><br>
+    Email: <input type="email" name="email"  required><br><br>
     New Password: <input type="password" name="password" required><br><br>
     <button type="submit">Update</button>
-</form>
+</form
+
 
