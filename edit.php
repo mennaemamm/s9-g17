@@ -8,7 +8,7 @@ if (!isset($_SESSION['id'])) {
 
 $id = $_SESSION['id'];
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] ==='POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
@@ -30,5 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     New Password: <input type="password" name="password" required><br><br>
     <button type="submit">Update</button>
 </form
+
 
 
