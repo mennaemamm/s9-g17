@@ -3,7 +3,7 @@ session_start();
 include "./connec.php";
 
 if (!isset($_SESSION['id'])) {
-    die(" يجب تسجيل الدخول أولاً.");
+    die(" Login first.");
 }
 
 $id = $_SESSION['id'];
@@ -16,10 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "UPDATE users SET email='$email', password='$hashedPassword' WHERE id=$id";
     if (mysqli_query($conn, $sql)) {
-        echo "تم تعديل البيانات.";
+        echo "done.";
         $_SESSION['email'] = $email;
     } else {
-        echo " خطأ: " . mysqli_error($conn);
+        echo " error " . mysqli_error($conn);
     }
 }
 ?>
@@ -30,3 +30,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     New Password: <input type="password" name="password" required><br><br>
     <button type="submit">Update</button>
 </form>
+
